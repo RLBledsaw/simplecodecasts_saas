@@ -32,5 +32,9 @@
 
 <div class="container"><%= yield %></div>
 
+<% flash.each do |key, value| %>
+  <%= content_tag :div, value, class: "alert alert_#{key}" %>
+<% end %>
+
 </body>
 </html>
